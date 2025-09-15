@@ -6,12 +6,12 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 13:13:38 by smarquez          #+#    #+#             */
-/*   Updated: 2025/09/15 13:54:37 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/09/15 16:56:37 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Inc/cube.h"
-#include "print_utils.h"
+#include "../Inc/print_utils.h"
 
 void	print_map(t_map map)
 {

@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 13:13:16 by smarquez          #+#    #+#             */
-/*   Updated: 2025/09/15 13:54:37 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/09/15 16:41:41 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,4 +89,3 @@ e_exit_status	handler_mapline(char *line, t_map *map, t_mealy *machine)
 		map->width = width;
 	return (SUCCESS);
 }
-

@@ -6,13 +6,13 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 13:13:26 by smarquez          #+#    #+#             */
-/*   Updated: 2025/09/15 13:13:27 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/09/15 16:46:30 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../Inc/cube.h"
 #include <math.h>
+
 // void draw_line(t_mlx *mlx, t_player player, t_map *map, float pow_angle) {
 //         float cos_angle;
 //         float sin_angle;
@@ -80,8 +80,8 @@
 // void draw_minimap(t_map *map, t_mlx *mlx,  t_player *player)
 // {
 //     draw_squared_map(mlx, map->map);
-//     //Tengo que pensar que la posicion del player 
-//     //en el mapa3D y en el minimapa , estan relacionadas 
+//     //Tengo que pensar que la posicion del player
+//     //en el mapa3D y en el minimapa , estan relacionadas
 //     //pero no son iguales
 //     draw_square(mlx, player->offset_x, player->offset_y, GREEN);
 //     draw_pov(mlx, player, map);

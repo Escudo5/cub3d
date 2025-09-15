@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 13:13:21 by smarquez          #+#    #+#             */
-/*   Updated: 2025/09/15 16:34:22 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/09/15 16:42:12 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,18 +66,26 @@ void	init_camera(t_camera *camera, t_map *map, t_params params)
 
 void	init_scene(t_scene *scene, t_map *map)
 {
+	extern t_mlx	*g_mlx;
+
 	init_controls(&(scene->controls));
 	init_params(&(scene->params));
 	init_camera(&(scene->camera), map, scene->params);
-
 	// Inicializar texturas solo una vez
-	extern t_mlx *g_mlx;
-	map->img_no = mlx_xpm_file_to_image(g_mlx->mlx, map->texture_no, &map->width_no, &map->height_no);
-	map->addr_no = mlx_get_data_addr(map->img_no, &map->bpp_no, &map->lpl_no, &map->endian_no);
-	map->img_so = mlx_xpm_file_to_image(g_mlx->mlx, map->texture_so, &map->width_so, &map->height_so);
-	map->addr_so = mlx_get_data_addr(map->img_so, &map->bpp_so, &map->lpl_so, &map->endian_so);
-	map->img_we = mlx_xpm_file_to_image(g_mlx->mlx, map->texture_we, &map->width_we, &map->height_we);
-	map->addr_we = mlx_get_data_addr(map->img_we, &map->bpp_we, &map->lpl_we, &map->endian_we);
-	map->img_ea = mlx_xpm_file_to_image(g_mlx->mlx, map->texture_ea, &map->width_ea, &map->height_ea);
-	map->addr_ea = mlx_get_data_addr(map->img_ea, &map->bpp_ea, &map->lpl_ea, &map->endian_ea);
+	map->img_no = mlx_xpm_file_to_image(g_mlx->mlx, map->texture_no,
+			&map->width_no, &map->height_no);
+	map->addr_no = mlx_get_data_addr(map->img_no, &map->bpp_no, &map->lpl_no,
+			&map->endian_no);
+	map->img_so = mlx_xpm_file_to_image(g_mlx->mlx, map->texture_so,
+			&map->width_so, &map->height_so);
+	map->addr_so = mlx_get_data_addr(map->img_so, &map->bpp_so, &map->lpl_so,
+			&map->endian_so);
+	map->img_we = mlx_xpm_file_to_image(g_mlx->mlx, map->texture_we,
+			&map->width_we, &map->height_we);
+	map->addr_we = mlx_get_data_addr(map->img_we, &map->bpp_we, &map->lpl_we,
+			&map->endian_we);
+	map->img_ea = mlx_xpm_file_to_image(g_mlx->mlx, map->texture_ea,
+			&map->width_ea, &map->height_ea);
+	map->addr_ea = mlx_get_data_addr(map->img_ea, &map->bpp_ea, &map->lpl_ea,
+			&map->endian_ea);
 }

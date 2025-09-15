@@ -6,19 +6,19 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 13:13:46 by smarquez          #+#    #+#             */
-/*   Updated: 2025/09/15 14:29:51 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/09/15 16:40:33 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Inc/cube.h"
-#include "../libft/libft.h"
 #include "../Inc/validate_map_utils.h"
+#include "../libft/libft.h"
 
-e_exit_status normalize_map(t_map *map)
+e_exit_status	normalize_map(t_map *map)
 {
-	char *normalized_line;
-	int num_common_spaces;
-	int i;
+	char	*normalized_line;
+	int		num_common_spaces;
+	int		i;
 
 	num_common_spaces = get_common_initial_space(map);
 	map->width -= num_common_spaces;
@@ -26,7 +26,8 @@ e_exit_status normalize_map(t_map *map)
 	i = -1;
 	while (++i < map->height)
 	{
-		normalized_line = normalize_map_line(map->map[i], map->width, num_common_spaces);
+		normalized_line = normalize_map_line(map->map[i], map->width,
+				num_common_spaces);
 		if (!normalized_line)
 			return (ERR_FAIL_MALLOC);
 		free(map->map[i]);

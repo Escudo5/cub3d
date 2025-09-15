@@ -33,9 +33,14 @@ OBJ_DIR = ./Obj/
 OBJ := $(patsubst $(SRC_DIR)%.c, $(OBJ_DIR)%.o, $(SRC))
 
 #INCLUDES
-INC_FILES	= cube.h 			\
-			  defines.h			\
-			  structs.h
+INC_FILES	= cube.h \
+			  defines.h \
+			  structs.h \
+			  handlers_utils.h \
+			  validate_map_utils.h \
+			  player_utils.h \
+			  render_utils.h \
+			  print_utils.h
 INC_DIR		= ./Inc/
 INC := $(addprefix $(INC_DIR), $(INC_FILES))
 

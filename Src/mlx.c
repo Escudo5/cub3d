@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 13:13:29 by smarquez          #+#    #+#             */
-/*   Updated: 2025/09/15 13:13:30 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/09/15 16:43:29 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	my_pixel_put(t_mlx *mlx, int x, int y, int color)
 {
 	char	*dst;
 
-	// printf("ejecutando my_pixel_put con x[%d] y[%d] color[%d]\n", x , y,color);
+	// printf("ejecutando my_pixel_put con x[%d] y[%d] color[%d]\n", x ,y,color);
 	if (x >= WIN_WIDTH || y >= WIN_HEIGHT || x < 0 || y < 0)
 		return ;
 	dst = mlx->addr + (y * mlx->lpl + x * mlx->bpp / 8);

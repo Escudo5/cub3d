@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 12:50:54 by smarquez          #+#    #+#             */
-/*   Updated: 2025/09/15 16:34:22 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/09/15 16:36:58 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,11 @@ void	perform_raycasting(t_map *map, t_mlx *mlx, t_scene *scene)
 		calculate_step_and_sidedist(&dda, &scene->camera);
 		perform_dda(&dda, map);
 		calculate_wall_distance(&dda);
-	draw_wall_stripe(mlx, &dda, col, map, &scene->camera);
+		draw_wall_stripe(mlx, &dda, col, map, &scene->camera);
 	}
 }
 
-
-void set_menu(t_mlx *mlx, t_controls *controls, t_params *params,
+void	set_menu(t_mlx *mlx, t_controls *controls, t_params *params,
 		t_camera *camera)
 {
 	(void)controls;

@@ -1,8 +1,3 @@
-
-#include "../Inc/cube.h"
-#include "../Inc/handlers_utils.h"
-#include "../libft/libft.h"
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -11,11 +6,15 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 13:13:13 by smarquez          #+#    #+#             */
-/*   Updated: 2025/09/15 14:25:50 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/09/15 16:42:02 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-e_exit_status handler_empty(char *line, t_map *map, t_mealy *machine)
+#include "../Inc/cube.h"
+#include "../Inc/handlers_utils.h"
+#include "../libft/libft.h"
+
+e_exit_status	handler_empty(char *line, t_map *map, t_mealy *machine)
 {
 	(void)line;
 	(void)map;
@@ -23,7 +22,7 @@ e_exit_status handler_empty(char *line, t_map *map, t_mealy *machine)
 	return (SUCCESS);
 }
 
-e_exit_status handler_error(char *line, t_map *map, t_mealy *machine)
+e_exit_status	handler_error(char *line, t_map *map, t_mealy *machine)
 {
 	(void)line;
 	(void)map;
@@ -31,7 +30,7 @@ e_exit_status handler_error(char *line, t_map *map, t_mealy *machine)
 	return (ERR_PARSER);
 }
 
-e_exit_status handler_eof(char *line, t_map *map, t_mealy *machine)
+e_exit_status	handler_eof(char *line, t_map *map, t_mealy *machine)
 {
 	(void)line;
 	if ((machine->tokens_mask & 0x7F) != 0x7F)

@@ -6,14 +6,14 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 13:30:00 by smarquez          #+#    #+#             */
-/*   Updated: 2025/09/15 13:54:37 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/09/15 16:53:20 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PRINT_UTILS_H
 # define PRINT_UTILS_H
 
-# include "../Inc/cube.h"
+# include "cube.h"
 
 void	print_scene_controls(t_scene scene);
 void	print_scene_params(t_scene scene);
