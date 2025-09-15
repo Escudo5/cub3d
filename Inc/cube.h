@@ -45,7 +45,7 @@ void init_ray(t_dda *, t_camera *, int );
 void calculate_step_and_sidedist(t_dda *, t_camera *);
 void calculate_wall_distance(t_dda *);
 void perform_dda(t_dda *, t_map *);
-void draw_wall_stripe(t_mlx *, t_dda *, int , t_map *);
+void draw_wall_stripe(t_mlx *, t_dda *, int , t_map *, t_camera *);
 void perform_raycasting(t_map *, t_mlx *, t_scene *);
 
 //HOOKS_C

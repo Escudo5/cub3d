@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "../Inc/cube.h"
+t_mlx *g_mlx = NULL;
 #include "../libft/libft.h"
 #include "../minilibx-linux/mlx.h"
 
@@ -34,6 +35,7 @@ int	main(int ac, char **av)
 	}
 	print_map(game.map);
 	init_mlx(&(game.mlx));
+	g_mlx = &(game.mlx);
 	init_scene(&(game.scene), &(game.map));
 	print_scene(game.scene);
 

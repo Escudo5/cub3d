@@ -62,11 +62,27 @@ typedef struct s_mealy {
 } t_mealy;
 
 typedef struct s_map {
+    int width_no, height_no;
+    int width_so, height_so;
+    int width_we, height_we;
+    int width_ea, height_ea;
     char **map;
     char *texture_no;
     char *texture_so;
     char *texture_we;
     char *texture_ea;
+    void *img_no;
+    void *img_so;
+    void *img_we;
+    void *img_ea;
+    char *addr_no;
+    char *addr_so;
+    char *addr_we;
+    char *addr_ea;
+    int bpp_no, lpl_no, endian_no;
+    int bpp_so, lpl_so, endian_so;
+    int bpp_we, lpl_we, endian_we;
+    int bpp_ea, lpl_ea, endian_ea;
     int color_floor;
     int color_ceiling;
     char orientation;
